@@ -1,67 +1,90 @@
-/* RESET */
+/* =========================
+   RESET BÁSICO
+========================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* BODY */
+/* =========================
+   ESTILO GERAL
+========================= */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
 }
 
-/* HEADER */
+/* =========================
+   CABEÇALHO
+========================= */
 header {
     background-color: #004aad;
-    color: white;
+    color: #fff;
+    padding: 15px 30px;
     display: flex;
     justify-content: space-between;
-    padding: 15px 30px;
     align-items: center;
+    flex-wrap: wrap;
 }
 
-.logo {
-    font-size: 20px;
-    font-weight: bold;
+.logo h1 {
+    font-size: 24px;
 }
 
-nav a {
-    color: white;
-    margin-left: 20px;
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu li a {
+    color: #fff;
     text-decoration: none;
+    font-weight: bold;
     transition: 0.3s;
 }
 
-nav a:hover {
+.menu li a:hover {
     color: #cce0ff;
 }
 
-/* HERO */
+/* =========================
+   SEÇÃO HERO
+========================= */
 .hero {
+    background: linear-gradient(rgba(0, 74, 173, 0.8), rgba(0, 74, 173, 0.8)),
+                url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1400&q=80');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
     text-align: center;
-    padding: 40px 20px;
-    background: linear-gradient(to right, #004aad, #0066ff);
-    color: white;
+    padding: 80px 20px;
 }
 
-.hero h1 {
-    font-size: 28px;
+.hero-content h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
 }
 
-.hero p {
-    margin-top: 10px;
+.hero-content p {
+    font-size: 18px;
 }
 
-/* BUSCA */
+/* =========================
+   BARRA DE BUSCA
+========================= */
 .busca {
     text-align: center;
-    margin: 30px;
+    margin: 30px 0;
 }
 
 .busca input {
     padding: 10px;
     width: 250px;
+    max-width: 80%;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
@@ -69,51 +92,123 @@ nav a:hover {
 .busca button {
     padding: 10px 15px;
     background-color: #004aad;
-    color: white;
+    color: #fff;
     border: none;
     border-radius: 5px;
+    margin-left: 5px;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 .busca button:hover {
     background-color: #003080;
 }
 
-/* LIVROS */
+/* =========================
+   SEÇÃO DE LIVROS
+========================= */
 .livros {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.titulo-secao {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #004aad;
+}
+
+.grid-livros {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
-    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .card {
-    background-color: white;
-    padding: 15px;
+    background-color: #fff;
     border-radius: 10px;
-    text-align: center;
-    transition: 0.3s;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
 .card img {
     width: 100%;
+    height: 250px;
+    object-fit: cover;
     border-radius: 8px;
 }
 
 .card h3 {
-    margin: 10px 0;
+    margin: 15px 0 10px;
+    color: #004aad;
 }
 
-/* FOOTER */
+.card p {
+    font-size: 14px;
+}
+
+/* =========================
+   SEÇÃO DE CONTATO
+========================= */
+.contato {
+    background-color: #eef2f7;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contato h2 {
+    color: #004aad;
+    margin-bottom: 15px;
+}
+
+/* =========================
+   RODAPÉ
+========================= */
 footer {
     background-color: #004aad;
-    color: white;
+    color: #fff;
     text-align: center;
     padding: 15px;
     margin-top: 20px;
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .hero-content h2 {
+        font-size: 28px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .busca input {
+        width: 70%;
+        margin-bottom: 10px;
+    }
+
+    .busca button {
+        margin-left: 0;
+    }
 }
