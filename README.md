@@ -1,25 +1,14 @@
-# 📚 Biblioteca UniFECAF
+# 📚 Biblioteca Virtual UniFECAF
 
-Projeto de desenvolvimento web utilizando HTML e CSS para criação de um site de biblioteca virtual.
+Este projeto foi desenvolvido como parte da disciplina de Desenvolvimento Web do curso de Análise e Desenvolvimento de Sistemas. O objetivo é criar um site estático que simule uma biblioteca virtual, utilizando HTML5 e CSS3.
 
-## 🚀 Objetivo
+## 🌐 Demonstração
 
-Desenvolver uma interface simples e funcional onde usuários possam visualizar livros online, com foco em organização e usabilidade.
+O site apresenta uma interface simples e organizada, com exibição de livros da área de tecnologia, incluindo imagens, títulos e descrições.
 
 ## 🛠️ Tecnologias Utilizadas
 
-- HTML5
-- CSS3
-
-## 💻 Funcionalidades
-
-- Menu de navegação
-- Barra de busca
-- Exibição de livros em cards
-- Layout organizado e responsivo
-
-## 📸 Preview do Projeto
-
-(Adicione aqui prints do seu site depois)
-
-## 📂 Estrutura do Projeto
+- **HTML5** – Estruturação do conteúdo.
+- **CSS3** – Estilização e layout responsivo.
+- **Git e GitHub** – Versionamento e hospedagem do código.
+- **GitHub Codespaces** – Ambiente de desenvolvimento.
